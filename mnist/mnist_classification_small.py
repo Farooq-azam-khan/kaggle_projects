@@ -27,8 +27,19 @@ def get_split():
     one_hot_train_y = get_one_hot_array(train_y)
     one_hot_test_y = get_one_hot_array(test_y)
     # print(train_y[0], one_hot_train_y[0])
+    train_X = normalize_X(train_X)
+    test_X = normalize_X(test_X)
     return train_X, test_X, one_hot_train_y, one_hot_test_y
 
+def normalize_X(arr):
+    arr_ret = []
+    for val_arr in arr:
+        val_arr_ret = []
+        for val in val_arr:
+            val_arr_ret.append(val/255)
+        arr_ret.append(val_arr_ret)
+    return arr_ret
+    
 def get_one_hot_array(arr):
     ret_arr = []
     # make one hot array for train_y and test_y
@@ -66,9 +77,11 @@ def get_digits(ys):
     
     
 def main():  
+    print("neural network")
     nn_training()
-    see_cm()
+    print("svm svc")
     svm_Classification()
+    # see_cm()
     
     
 def svm_Classification():
@@ -92,18 +105,18 @@ def see_cm():
 def nn_training():
     max_accuracy = 0.0
     print("started training")
-    for epoch in range(15):
+    for epoch in range(1, 15):
         train_X, test_X, train_y, test_y = get_split()
         for x, y in zip(train_X, train_y):
             nn.train(x, y)
-        training_accuracy = get_accuracy(train_X, train_y)
-        testing_accuracy = get_accuracy(test_X, test_y)
+        training_accuracy = nn.get_accuracy(train_X, train_y)
+        testing_accuracy = nn.get_accuracy(test_X, test_y)
         if testing_accuracy > max_accuracy:
             max_accuracy = testing_accuracy
-        if epoch%5==0:
-            print(f"Epoch: {epoch+1} ---> train_acc: {training_accuracy:.2} ---> test_acc: {testing_accuracy:.2}")
+        if (epoch)%5==0:
+            print(f"Epoch: {epoch} ---> train_acc: {training_accuracy:.2} ---> test_acc: {testing_accuracy:.2}")
     print(f"finished training with max acc: {max_accuracy}")
         
-    
+
 if __name__ == '__main__':
     main()
