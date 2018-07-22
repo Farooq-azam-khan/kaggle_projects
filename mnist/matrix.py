@@ -151,20 +151,3 @@ class Matrix():
             result += "]\n"
         return result
 
-
-
-
-def main():
-    m1 = Matrix(2,2)
-    m2 = Matrix(2,2)
-
-    print(m1)
-    m1.activationFunction("sigmoid")
-    print(m1)
-    # print(m1)
-    # print(m2)
-    # print(Matrix.matMultiply(m1, m2))
-
-
-if __name__ == "__main__":
-    main()

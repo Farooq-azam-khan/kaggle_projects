@@ -82,74 +82,35 @@ def get_digits(ys):
     for y in ys:
         dig_ys.append(np.argmax(y))
     return dig_ys
-
-def plot_confusion_matrix(cm, classes,
-                          normalize=False,
-                          title='Confusion matrix for Digits',
-                          cmap=plt.cm.Blues):
-    """
-    This function prints and plots the confusion matrix.
-    Normalization can be applied by setting `normalize=True`.
-    """
-    if normalize:
-        cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
-        print("Normalized confusion matrix")
-    else:
-        print('Confusion matrix, without normalization')
-
-    print(cm)
-
-    plt.imshow(cm, interpolation='nearest', cmap=cmap)
-    plt.title(title)
-    plt.colorbar()
-    tick_marks = np.arange(len(classes))
-    plt.xticks(tick_marks, classes, rotation=45)
-    plt.yticks(tick_marks, classes)
-
-    fmt = '.2f' if normalize else 'd'
-    thresh = cm.max() / 2.
-    for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
-        plt.text(j, i, format(cm[i, j], fmt),
-                 horizontalalignment="center",
-                 color="white" if cm[i, j] > thresh else "black")
-
-    plt.tight_layout()
-    plt.ylabel('True label')
-    plt.xlabel('Predicted label')
     
     
 def main():  
     nn_training()
     
     # getting confusion matrix
+    train_X, test_X, train_y, test_y = get_split()
     labels = [0,1,2,3,4,5,6,7,8,9]
-    ys_true = get_digits(target)
+    cm = nn.confusion_matrix(train_X, train_y, labels, normalize=True)
+    accuracy = nn.get_accuracy(train_X, train_y)
     
-    nn_predictions = []
-    for x in data:
-        nn_predictions.append(nn.feed_forward(x))
-        
-    ys_pred = get_digits(nn_predictions)
-    
-    cm = confusion_matrix(y_true=ys_true, y_pred=ys_pred, labels=labels)
+    print(accuracy)
     print(cm)
-    print(get_accuracy(data, get_one_hot_array(target)))
-    
-    plt.figure()    
-    plot_confusion_matrix(cm, classes=labels, normalize=False)
-
-    plt.show() 
-
     
     
 def nn_training():
-    for epoch in range(10):
+    max_accuracy = 0.0
+    print("started training")
+    for epoch in range(15):
         train_X, test_X, train_y, test_y = get_split()
         for x, y in zip(train_X, train_y):
             nn.train(x, y)
         training_accuracy = get_accuracy(train_X, train_y)
         testing_accuracy = get_accuracy(test_X, test_y)
-        print(f"Epoch: {epoch+1} ---> train_acc: {training_accuracy:.2} ---> test_acc: {testing_accuracy:.2}")
+        if testing_accuracy > max_accuracy:
+            max_accuracy = testing_accuracy
+        if epoch%5==0:
+            print(f"Epoch: {epoch+1} ---> train_acc: {training_accuracy:.2} ---> test_acc: {testing_accuracy:.2}")
+    print(f"finished training with max acc: {max_accuracy}")
         
     
 if __name__ == '__main__':
