@@ -58,25 +58,6 @@ def get_one_hot_array(arr):
     return ret_arr
             
 
-
-def get_accuracy(xs, ys):
-    score = 0 
-    for x, y in zip(xs, ys):
-        
-        # prediction number
-        prediction_arr = nn.feed_forward(x)
-        max_val_pred = max(prediction_arr)
-        index_max_val = prediction_arr.index(max_val_pred)
-        
-        # actual number
-        max_val_y = max(y)
-        actual_y = y.index(max_val_y)
-        
-        if actual_y == index_max_val:
-            score += 1
-        
-    return score / len(xs)
-
 def get_digits(ys):
     dig_ys = []
     for y in ys:
@@ -86,16 +67,27 @@ def get_digits(ys):
     
 def main():  
     nn_training()
+    see_cm()
+    svm_Classification()
     
+    
+def svm_Classification():
+    train_X, test_X, train_y, test_y = model_selection.train_test_split(data, target, random_state=0)
+    clf = svm.SVC(gamma=0.001)
+    clf.fit(train_X, train_y)
+    y_true_svc = test_y
+    y_pred_svc = clf.predict(test_X)
+    cm = confusion_matrix(y_true_svc, y_pred_svc)
+    print(clf.score(test_X, test_y))
+    print(cm)
+    
+
+def see_cm():
     # getting confusion matrix
     train_X, test_X, train_y, test_y = get_split()
     labels = [0,1,2,3,4,5,6,7,8,9]
     cm = nn.confusion_matrix(train_X, train_y, labels, normalize=True)
-    accuracy = nn.get_accuracy(train_X, train_y)
-    
-    print(accuracy)
     print(cm)
-    
     
 def nn_training():
     max_accuracy = 0.0
