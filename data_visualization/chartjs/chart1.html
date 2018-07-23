@@ -4,11 +4,16 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 </head>
 <body>
+   <!-- Create a canvas that we can reference  -->
    <canvas id="myChart"></canvas>
    <script>
+      
+      // Select the place where the graph is going to be drawn
       let myChart = document.getElementById('myChart').getContext('2d');
+      
+      // create the chart object here 
       let graph_chart = new Chart(myChart, {
-         type: 'bar', 
+         type: 'bar', // line, pie, doughnut, bubble, radar, scatter, area, polarArea
          data: {
             labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"], 
             datasets: [{

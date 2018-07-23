@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+</head>
+<body>
+   <canvas id="myChart"></canvas>
+   <script>
+      
+      let dataset1 = {
+         label: 'Crime Per Month', 
+         data: [
+            {
+               x: 12, 
+               y: 15
+            },
+            {
+               x: 24, 
+               y: 24
+            }, 
+            {
+               x: 34, 
+               y: 24
+            }, 
+            {
+               x: 64, 
+               y: 242
+            }, 
+            {
+               x: 23, 
+               y: 43
+            }, 
+            {
+               x: 15, 
+               y: 80
+            }
+         ], 
+         fill: true,
+         backgroundColor: 'rgba(0, 255, 14, 0.2)'
+      }
+      let dataset2 = {
+         label: 'Act of Kindness Per Month',
+         data: [
+            {
+               x: 122, 
+               y: 154
+            },
+            {
+               x: 245, 
+               y: 234
+            }, 
+            {
+               x: 343, 
+               y: 22
+            }, 
+            {
+               x: 24, 
+               y: 42
+            }, 
+            {
+               x: 123, 
+               y: 413
+            }, 
+            {
+               x: 115, 
+               y: 180
+            }
+         ],
+         backgroundColor: 'rgba(255, 0, 40, 0.4)'
+      }
+      let data = {
+         labels: ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+         datasets: [dataset1, dataset2]
+      }
+      
+      // modify the chart 
+      let options = {
+         title: {
+            display: true, 
+            text: 'Title, for this Graph'
+         }
+      }
+      
+      let myChart = document.getElementById('myChart').getContext('2d');
+      let graph_chart = new Chart(myChart, {
+         type: 'scatter', 
+         data: data, 
+         // options
+         options: options
+      }); 
+   </script>
+</body>
+</html>

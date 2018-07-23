@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+</head>
+<body>
+   <canvas id="myChart"></canvas>
+   <script>
+   
+      let line_data = {
+         labels: ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+         datasets: [{
+            label: 'Crime Per Month', 
+            data: [14, 2, 3, 54, 55, 76, 74, 82, 29, 10, 11, 12], 
+            fill: false,
+            backgroundColor: 'rgba(10, 255, 14, 0.2)'
+         }]
+      }
+      let myChart = document.getElementById('myChart').getContext('2d');
+      let graph_chart = new Chart(myChart, {
+         type: 'line', 
+         data: line_data, 
+      }); 
+   </script>
+</body>
+</html>
