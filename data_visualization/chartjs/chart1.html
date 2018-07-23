@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+</head>
+<body>
+   <canvas id="myChart"></canvas>
+   <script>
+      let myChart = document.getElementById('myChart').getContext('2d');
+      let graph_chart = new Chart(myChart, {
+         type: 'bar', 
+         data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"], 
+            datasets: [{
+               label: 'num of votes',
+               data: [12, 19, 3, 5, 2, 3],
+               backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            }, 
+            {
+               label: 'number of no votes',
+               data: [10, 15, 20, 3, 3, 3],
+            }
+         ]
+         }
+      }); 
+   </script>
+</body>
+</html>
