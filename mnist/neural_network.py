@@ -3,19 +3,28 @@ from matrix import Matrix
 import math
 import random
 
-def sigmoid(x):
-    return 1 / (1 + math.exp(-x))
-def dsigmoid(y):
-    return y * (1 - y) #sigmoid(x) * (1 - sigmoid(x))
 
+class ActivationFunction():
+    #            fucntion, derivative of function 
+    def __init__(self, func, dfunc):
+        self.func = func
+        self.dfunc = dfunc
+
+sigmoid = ActivationFunction(lambda x: 1/(1+math.exp(-x)), lambda y: y*(1-y))
+tanh = ActivationFunction(lambda x: math.tanh(x), lambda y: 1 - (y*y))
+
+        
 class NeuralNetwork():
     def __init__(self, input_nodes, hidden_nodes, output_nodes):
         self.input_nodes = input_nodes
         self.hidden_nodes = hidden_nodes
         self.output_nodes = output_nodes
+        
 
         # set the learning rate
         self.lr = 0.1
+        # set activation function
+        self.set_activation_function()
 
         # inputs -> hidden layer -> outputs
         self.weights_ih = Matrix(self.hidden_nodes, self.input_nodes)
@@ -32,8 +41,12 @@ class NeuralNetwork():
         self.bias_o.randomize()
 
     ''' sets the learning rate '''
-    def setLR(lr):
+    
+    def setLR(self, lr):
         self.lr = lr
+    
+    def set_activation_function(self, func = sigmoid):
+        self.activation_function = func
     
     def save_best_model(self):
         # TODO: write a file with info regarding class
@@ -47,12 +60,12 @@ class NeuralNetwork():
         hidden.add(self.bias_h)
 
         # activation function on the hidden nodes
-        hidden.map(sigmoid)
+        hidden.map(self.activation_function.func)
 
         # get the values for the output
         output = Matrix.matMultiply(self.weights_ho, hidden) # multiply ho wegths with hidden nodes
         output.add(self.bias_o) # add bias
-        output.map(sigmoid) # sigmoid activation
+        output.map(self.activation_function.func) # sigmoid activation
 
         # return output as array
         return output.toArray()
@@ -110,18 +123,18 @@ class NeuralNetwork():
         # get values for hidden nodes
         hidden = Matrix.matMultiply(self.weights_ih, inputs)
         hidden.add(self.bias_h)
-        hidden.map(sigmoid)
+        hidden.map(self.activation_function.func)
         # get values for output nodes
         outputs = Matrix.matMultiply(self.weights_ho, hidden)
         outputs.add(self.bias_o)
-        outputs.map(sigmoid)
+        outputs.map(self.activation_function.func)
 
 
         # calculate the error, ERROR = TARGETS - OUTPUTS
         output_errors = Matrix.subtract(targets, outputs)
 
         # get derivative of output_errors: gradien = ouptuts * (1 - outputs)
-        gradients = Matrix.static_map(outputs, dsigmoid)
+        gradients = Matrix.static_map(outputs, self.activation_function.dfunc)
 
         gradients.multiply(output_errors)
         gradients.multiply(self.lr)
@@ -141,7 +154,7 @@ class NeuralNetwork():
         hidden_errors = Matrix.matMultiply(who_t, output_errors)
 
         # hidden gradient
-        hidden_gradient = Matrix.static_map(hidden, dsigmoid)
+        hidden_gradient = Matrix.static_map(hidden, self.activation_function.dfunc)
         hidden_gradient.multiply(hidden_errors)
         hidden_gradient.multiply(self.lr)
 
