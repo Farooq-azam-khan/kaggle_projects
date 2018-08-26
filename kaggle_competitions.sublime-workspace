@@ -1,0 +1,392 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"is",
+				"is_authenticated"
+			],
+			[
+				"col",
+				"col-lg-5"
+			],
+			[
+				"marg",
+				"margin-right\tproperty"
+			],
+			[
+				"mar",
+				"margin-left\tproperty"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"min",
+				"min-height\tproperty"
+			],
+			[
+				"le",
+				"lesson_image"
+			],
+			[
+				"backg",
+				"background\tproperty"
+			],
+			[
+				"less",
+				"lesson_detail_content"
+			],
+			[
+				"sub",
+				"subsection"
+			],
+			[
+				"pre",
+				"previous_section"
+			],
+			[
+				"sec",
+				"section"
+			],
+			[
+				"se",
+				"section_index"
+			],
+			[
+				"sect",
+				"sections"
+			],
+			[
+				"prev",
+				"previous_section"
+			],
+			[
+				"nex",
+				"next_section"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"sec_",
+				"sec_slug"
+			],
+			[
+				"lesson",
+				"lesson_content"
+			],
+			[
+				"lesso",
+				"lesson"
+			],
+			[
+				"draft",
+				"is_draft"
+			],
+			[
+				"les",
+				"lesson"
+			],
+			[
+				"Less",
+				"LessonForm"
+			],
+			[
+				"margi",
+				"margin\tproperty"
+			],
+			[
+				"back",
+				"background\tproperty"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
+				"sectio",
+				"section"
+			],
+			[
+				"Lesso",
+				"Lessons"
+			],
+			[
+				"section",
+				"section_slug"
+			],
+			[
+				"query",
+				"queryset"
+			],
+			[
+				"for",
+				"forloop"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"section_",
+				"section_detail_view"
+			],
+			[
+				"subsection",
+				"Subsection"
+			],
+			[
+				"Lesson",
+				"LessonDetailView"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 255.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Faroo/Documents/kaggle_project/kaggle_projects"
+	],
+	"file_history":
+	[
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/views.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/templates/main/cover_page/cover_page.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/static/main/cover_page/css/styles.css",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/templates/main/home.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/.gitignore",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/templates/main/cover_page/cover_page_layout.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/templates/layout.html",
+		"/C/Users/Faroo/Documents/kaggle_project/kaggle_projects/mnist/data/submission.csv",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/templates/snippets/favicons.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/views.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/snippets/lesson_jumbotron.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/search_page.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/templates/main/what_we_do.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/lesson_detail.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/lesson_list.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/templates/main/contact.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/lesson_layout.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/section_detail.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/templates/main/main_layout.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/static/snippets/css/jumbotron.css",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/templates/snippets/jumbotron.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/snippets/lesson_list_delete_draft_button.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/js_templates/navbar_highlight.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/snippets/lesson_detail_navbar.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/snippets/section_detail_navbar.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/js_templates/lesson_detail_js.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/snippets/section_detail_content.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/snippets/section_detail_next_prev_button.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/static/Lessons/js/test_templating.js",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/static/Lessons/js/is_active_element.js",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/models.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/snippets/lesson_detail_content.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/lesson_detail_navbar.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/MathEnergetics/settings.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/media_cdn/Lessons/wallhaven-668015.png",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/media_cdn/Lessons/wallhaven-680441.jpg",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/MathEnergetics/urls.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/urls.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/forms.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/migrations/0004_auto_20180817_1508.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/admin.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/static/Lessons/css/lesson_list.css",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/static/main/css/home.css",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/templates/snippets/navbar.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/static/snippets/css/navbar.css",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/static/snippets/navbar.css",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/static/snippets/styles.css",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/static/Lessons/css/styles.css",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/home.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/static/Lessons/images/lesson.jpg",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/urls.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/tests.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/templates/what_we_do.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/main/templates/main/cover_page.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/templates/contact.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/templates/cover_page/cover_layout.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/static/cover_page/css/styles.css",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/templates/cover_page/cover_page.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/utils.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/static/Lessons/styles.css",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/templates/cover_page.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/templates/snippets/import_bootstrap_css.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/templates/snippets/import_bootstrap_js.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/coverpage.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/templates/Lessons/layout.html",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/manage.py",
+		"/C/Users/Faroo/Documents/MathEnergetics-Website/src/Lessons/utls.py",
+		"/C/Users/Faroo/Documents/javatest.java",
+		"/C/Users/Faroo/Documents/javatest.javaa",
+		"/C/Users/Faroo/Documents/test.py"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 119.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "C:\\Users\\Faroo\\Documents\\kaggle_project\\kaggle_projects"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 48.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 292.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
