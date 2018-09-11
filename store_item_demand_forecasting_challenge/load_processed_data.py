@@ -2,14 +2,14 @@ import pandas as pd
 
 from sklearn.model_selection import train_test_split
 
-features_list = ['store', 
-	                       'item', 
-	                       'day', 'month', 'year', 
-	                       'weekofyear', 'dayofyear', 'weekday',
-	                      'weekofyear_median', 'dayofyear_median', 
-	                      'store_sales_median', 'item_sales_median', 
-	                      'store_item_sales_median', 
-	                      'store_item_weekofyear_sales_median']
+features_list = ['store',
+				 'item',
+				 'day', 'month', 'year',
+				 'weekofyear', 'dayofyear', 'weekday',
+				 'weekofyear_median', 'dayofyear_median',
+				 'store_sales_median', 'item_sales_median',
+				 'store_item_sales_median',
+				 'store_item_weekofyear_sales_median']
 
 def get_test_data():
 
